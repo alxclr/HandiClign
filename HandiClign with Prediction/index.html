@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link href="style.css" rel="stylesheet">
+    <title>THANDIQUOI</title>
+    <script src="API_key.js"></script>
+    <script src="MODEL_choice.js"></script>
+    <script src="script.js"></script>
+    <link rel="icon" type="image/x-icon" href="image/favicon.jpg">
+</head>
+
+
+<body onload=main()>
+    <div id="PRE1">prediction in progress</div>
+    <div id="PRE2">prediction in progress</div>
+
+    <div id="NW"> 
+        <div id="E">E</div>
+        <div id="S">S</div>
+        <div id="A">A</div>
+        <div id="R">R</div>
+        <div id="I">I</div>
+        <div id="N">N</div>
+    </div>
+
+    <div id="NE">
+        <div id="T">T</div>
+        <div id="U">U</div>
+        <div id="L">L</div>
+        <div id="O">O</div>
+        <div id="M">M</div>
+        <div id="D">D</div>
+    </div>
+
+    <div id="prediction">
+    </div>
+
+    <div id="spacebutton"></div>
+
+    <div id="word-container">
+        <div id="currentword"></div>
+        <div id="validation">
+            <div id="validate">validate</div>
+            <div id="cancel">cancel</div>
+        </div>
+    </div>
+    
+    <div id="space">space</div>
+
+    <div id="delete">delete</div>
+    <div id="pause">pause</div>
+
+    <div id="SW">
+        <div id="P">P</div>
+        <div id="C">C</div>
+        <div id="F">F</div>
+        <div id="B">B</div>
+        <div id="V">V</div>
+        <div id="H">H</div>
+    </div>
+
+    <div id="SE">
+        <div id="G">G</div>
+        <div id="J">J</div>
+        <div id="Q">Q</div>
+        <div id="Z">Z</div>
+        <div id="Y">Y</div>
+        <div id="X">X</div>
+        <div id="K">K</div>
+        <div id="W">W</div>
+    </div>
+
+   
+    <div class="taskbar">
+        <button class="task-button" onclick=blurring(this) id="settingsButton"><a>Settings</a></button>
+        <button class="task-button" onclick=saveText(this)><a>Save text</a></button>
+    </div>
+
+    <div class="dropdown-menu" id="dropdownMenu">
+        <h3>Settings</h3>
+        <div class="setting-item">
+            <label for="color">Color:</label>
+            <input type="color" id="color" name="color" value="#95f297">
+        </div>
+        <div class="setting-item">
+            <label for="delay">Speed:</label>
+            <input type="range" id="delay" name="delay" min="500" max="4000" value="2000">
+        </div>
+        <div class="setting-item">
+            <label for="font-size">Font size:</label>
+            <input type="range" id="font-size" name="font-size" min="20" max="80" value="50" step="5">
+        </div>
+        </div>
+</body>
+
+<script>
+    const slider = document.getElementById("font-size");
+    slider.addEventListener("input", () => {
+      const percent_fs = slider.value*10 + "%";
+      const percent_pd = slider.value*4 + "%";
+      document.documentElement.style.setProperty("--font-size_pd", percent_pd);
+      document.documentElement.style.setProperty("--font-size_fs", percent_fs);
+    });
+</script>
+
+
+</html>

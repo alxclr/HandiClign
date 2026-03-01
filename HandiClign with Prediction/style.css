@@ -1,0 +1,386 @@
+/* Here you can choose the color of the keys, the blink color, 
+ */
+
+:root {
+    --color-button: white;
+    --color-clignotement: rgb(171, 237, 127);
+    --color-background: rgb(242, 165, 161);
+    --font-size_fs: 500%;
+    --font-size_pd: 200%;
+}
+
+body {
+    background-color: var(--color-background);
+    background-size: 100%;
+}
+
+.buttonSave {
+    width: auto;
+    /* height: 50px; */
+    height: auto;
+    position: absolute;
+    bottom: 20%;    
+    left: 44.5%;
+    flex-wrap: wrap;
+    display: flex; 
+    text-align: center;
+    font-size: 100%;
+    justify-content: center;
+    border-radius: 10%;
+}
+
+.buttonSave:hover {
+    background-color: rgb(175, 114, 114);
+}
+
+#space {
+    width: 15%;
+    /* height: 50px; */
+    height: auto;
+    position: absolute;
+    bottom: 10%;
+    left: 42.5%;
+    flex-wrap: wrap;
+    display: flex;
+    text-align: center;
+    font-size: var(--font-size_pd);
+    justify-content: center;
+    border-radius: 10%;
+    --block-color: var(--color-button);
+    background-color: var(--block-color);
+}
+
+#pause {
+    width: 15%;
+    /* height: 50px; */
+    height: auto;
+    position: absolute;
+    bottom: 45%;
+    left: 9%;
+    flex-wrap: wrap;
+    display: flex;
+    text-align: center;
+    font-size: var(--font-size_pd);
+    justify-content: center;
+    border-radius: 10%;
+    --block-color: var(--color-button);
+    background-color: var(--block-color);
+}
+
+#delete {
+    width: 12%;
+    /* height: 50px; */
+    height: auto;
+    position: absolute;
+    bottom: 55%;
+    left: 80%;
+    flex-wrap: wrap;
+    display: flex;
+    text-align: center;
+    font-size: var(--font-size_pd);
+    justify-content: center;
+    border-radius: 10%;
+    --block-color: var(--color-button);
+    background-color: var(--block-color);
+}
+
+#PRE1 {
+    width: 20%;
+    height: auto;
+    position: absolute;
+    top: 65%;
+    left: 40%;
+    justify-content: center;
+    border-radius: 10%;
+    --block-color: var(--color-button);
+    background-color: var(--block-color);
+    text-align: center;
+    font-size: var(--font-size_pd);
+}
+
+#PRE2 {
+    width: 20%;
+    height: auto;
+    position: absolute;
+    top: 72%;
+    left: 40%;
+    justify-content: center;
+    border-radius: 10%;
+    --block-color: var(--color-button);
+    background-color: var(--block-color);
+    text-align: center;
+    font-size: var(--font-size_pd);
+}
+
+#word-container {
+    width: 30%;
+    margin: 2% auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* space between buttons and currentword */
+    position: absolute;
+    top: 0%;
+    left: 35%;  
+}
+
+#validation {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#currentword {
+    height: calc(1.2em * 8); /* 8 lines */
+    width: 100%;
+    background-color: var(--color-button);
+    font-size: var(--font-size_pd);
+    padding: 5px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    overflow-y: scroll;          /* Always displays the scrollbar */
+    overflow-x: hidden;
+    white-space: normal;
+    word-wrap: break-word;
+    text-align: left;
+}
+
+#validate, #cancel {
+    width: 30%;
+    font-size: 150%;
+    background-color: var(--color-button);
+    border-radius: 10%;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+#NW {
+    width: 30%;
+    height: auto;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    --block-color: var(--color-button);
+    align-items: center;
+}
+
+#NE {
+    width: 30%;
+    height: auto;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    --block-color: var(--color-button);
+    align-items: center;
+}
+
+#SW {
+    width: 30%;
+    height: auto;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    --block-color: var(--color-button);
+    align-items: center;
+}
+
+#SE {
+    width: 30%;
+    height: auto;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    --block-color: var(--color-button);
+    align-items: center;
+}
+
+#E,
+#Q,
+#W,
+#R,
+#T,
+#Y,
+#U,
+#I,
+#O,
+#P,
+#A,
+#S,
+#D,
+#F,
+#G,
+#H,
+#J,
+#K,
+#L,
+#Z,
+#X,
+#C,
+#V,
+#B,
+#N,
+#M {
+    width: 30%;
+    height: auto;
+    background-color: var(--block-color);
+    position: relative;
+    margin-top: 10px;
+    margin-left: auto;
+    text-align: center;
+    justify-content: center;
+    font-size: var(--font-size_fs);
+    font-family: 'Poppins', sans-serif;
+    /* Modern and readable font */
+    border-radius: 12%;
+    /* Rounded corners */
+    cursor: pointer;
+    box-shadow: 0 4% 6% rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+    /* Soft shadow */
+    transition: all 0.3s ease-in-out;
+    /* Smooth transition */
+}
+
+/* Hover effect */
+/* #M:hover {
+    transform: translateY(-5px);
+    
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.1);
+    
+    background-color: var(--color-clignotement);
+    
+} */
+
+/* Taskbar style */
+.taskbar {
+    position: fixed;
+    bottom: 0%;
+    left: 25%;
+    width: 50%;
+    background-color: transparent;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    /* padding: 10px 0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); */
+}
+
+/* Taskbar buttons style */
+.task-button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all .25s;
+    /* padding: 10px 0; */
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Buttons hover effect */
+.task-button:hover {
+    background-color: #f36e6e;
+    letter-spacing: 10px;
+}
+
+/* Settings dropdown menu */
+.dropdown-menu {
+    display: none;
+    /* Hidden by default */
+    position: absolute;
+    bottom: 60px;
+    /* Just above the taskbar */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #f36e6e;
+    opacity: 0.99;
+    color: white;
+    padding: 20px;
+    width: 250px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+
+}
+
+.setting-item {
+    margin-bottom: 15px;
+}
+
+input[type="range"] {
+    width: 100%;
+}
+
+/* Responsiveness effect */
+@media (max-width: 600px) {
+    .taskbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .task-button {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.loading-message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 200px;
+    margin-left: 47%;
+    margin-top: 20%;
+}
+
+.loader {
+    display: flex;
+    justify-content: space-between;
+    width: 80px;
+}
+
+.loader div {
+    width: 16px;
+    height: 16px;
+    background-color: olive;
+    border-radius: 50%;
+    animation: grow-shrink 0.5s infinite;
+}
+
+.loader div:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.loader div:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.loader div:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+@keyframes grow-shrink {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.5);
+    }
+}
